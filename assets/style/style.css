@@ -3,84 +3,8 @@ body {
     background-color: #000 !important;
 }
 
-.navbar {
-    padding-top: 30px 0px 30px 0px !important;
-}
+/* media query */
 
-main {
-    padding-top: 3rem;
-    color: white;
-    
-
-}
-
-.card {
-    background-color: rgba(27, 27, 27, 0.712) !important;
-}
-
-
-.tombol {
-    text-transform: uppercase;
-    border-radius: 40px !important;
-
-}
-
-.bg-cover {
-    background-size: cover;
-    color: #000;
-    background-position: center;
-    position: relative;
-    z-index: -2;
-}
-
-.jumbotron {
-    background: url(/assets/img/desa.jpg);
-    height: 40rem;
-    text-align: center;
-    padding-top: 10rem;
-    margin-bottom: 0px !important;
-
-}
-
-.lead span {
-    color: orange;
-    font-weight: bold;
-}
-
-.bg-cover {
-    background-size: cover;
-    color: white;
-    background-position: center center;
-    position: relative;
-    z-index: 1;
-}
-
-.overlay {
-    text-shadow: 2px 2px #000;
-    background-color: #000;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -2;
-}
-
-.aduan {
-
-    z-index: 2 !important;
-
-}
-
-footer{
-    color:white;
-    background-color: orange
-}
-
-footer p{
-    text-align: center ;
-}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 300px) {
@@ -148,3 +72,88 @@ footer p{
 
     }
 }
+
+/* =========================================== */
+
+
+main {
+    padding-top: 3rem;
+    color: white;
+}
+
+.bg-black{
+    background-color: black;
+    transition: 0.3s;
+}
+
+.card {
+    background-color: rgba(27, 27, 27, 0.712) !important;
+}
+
+
+.tombol {
+    text-transform: uppercase;
+    border-radius: 40px !important;
+
+}
+
+.bg-cover {
+    background-size: cover;
+    color: #000;
+    background-position: center;
+    position: relative;
+    z-index: -2;
+}
+
+.jumbotron{
+    height: 40rem;
+    text-align: center;
+    padding-top: 10rem;
+    background-size: cover;
+    margin-bottom: 0px !important;
+    background: url(../img/desa.jpg);
+}
+
+
+.lead span {
+    color: orange;
+    font-weight: bold;
+}
+
+.bg-cover {
+    background-size: cover;
+    color: white;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+
+.overlay {
+    text-shadow: 2px 2px #000;
+    background-color: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+}
+
+.aduan {
+
+    z-index: 2 !important;
+
+}
+
+footer{
+    color:white;
+    background-color: orange
+}
+
+footer p{
+    text-align: center ;
+}
+
+
+

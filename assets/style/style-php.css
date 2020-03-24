@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000 !important;
+}
+
+
+/* Media query */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width:  576px) {
+    .pembuka {
+        padding-top: 24%;
+    }
+
+    .tombol {
+        text-transform: uppercase;
+        border-radius: 40px !important;
+        margin: 8px;
+    }
+
+    /* .myCard {
+        margin: 20px 0 20px 0;
+    } */
+
+    #cardAbout {
+        z-index: 2 !important;
+        margin-top: 30px;
+        /* background-image: linear-gradient(to right, #c415c3, #0ec1da); */
+        background-image: linear-gradient(to top, rgba(0,0,0,100), rgba(255,255,255,0)) ; //tambahono iku neng @media seng 576px
+        border: none;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+
+    .pembuka {
+        padding-top: 25%;
+    }
+
+    .tombol {
+        text-transform: uppercase;
+        border-radius: 40px !important;
+        margin: 8px;
+
+    }
+
+    #cardAbout {
+        z-index: 2 !important;
+        margin-top: 30px;
+        /* background-image: linear-gradient(to right, #c415c3, #0ec1da); */
+        background-image: linear-gradient(to top, rgba(0,0,0,100), rgba(255,255,255,0)) ;
+        border: none;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .pembuka {
+        padding-top: 20%;
+    }
+
+    #cardAbout {
+        z-index: 2 !important;
+        margin-top: -100px;
+        background-image: linear-gradient(to right, #c415c3, #0ec1da);
+        /* background-image: linear-gradient(to top, rgba(0,0,0,100), rgba(255,255,255,0)) ; */
+        border: none;
+    }
+}
+
+
+
+
+@media (min-width: 1200px) {
+
+    .active {
+        border-bottom: 2px solid #28A745;
+        /* border-width: 3px !important; */
+        text-align: center;
+    }
+
+    .menu {
+        text-align: center;
+    }
+
+    .menu:hover {
+        border-bottom: 2px solid #28A745;
+        /* border-width: 3px !important; */
+    }
+
+    .pembuka {
+        padding-top: 20%;
+    }
+
+    .tombol {
+        text-transform: uppercase;
+        border-radius: 40px !important;
+        margin: 8px;
+
+    }
+
+    #cardAbout {
+        z-index: 2 !important;
+        margin-top: -100px;
+        background-image: linear-gradient(to right, #c415c3, #0ec1da);
+        /* background-image: linear-gradient(to top, rgba(0,0,0,100), rgba(255,255,255,0)) ; */
+        border: none;
+    }
+}
+
+/* ================================End media query============================= */
+main {
+    padding-top: 3rem;
+    color: white;
+}
+
+.bg-black {
+    background-color: black;
+    transition: 0.5s;
+}
+
+.card {
+    background-color: rgba(27, 27, 27, 0.712) !important;
+}
+
+
+.tombol {
+    text-transform: uppercase;
+    border-radius: 40px !important;
+
+}
+
+.bg-cover {
+    background-size: cover;
+    color: #000;
+    background-position: center;
+    position: relative;
+    z-index: -2;
+}
+
+.jumbotron {
+    height: 40rem;
+    text-align: center;
+    padding-top: 10rem;
+    margin-bottom: 0px !important;
+    background: url(../img/desa.jpg);
+}
+
+
+.lead span {
+    color: orange;
+    font-weight: bold;
+}
+
+.bg-cover {
+    background-size: cover;
+    color: white;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+
+.overlay {
+    text-shadow: 2px 2px #000;
+    background-color: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+}
+
+.aduan {
+
+    z-index: 2 !important;
+
+}
+
+footer {
+    color: white;
+    background-color: orange
+}
+
+footer p {
+    text-align: center;
+}
+
+.img-about {
+    height: 43px;
+    width: 43px;
+}
+
+.main-about {
+    color: white;
+   
+}
+
+.content-about {
+    padding: 10px;
+    margin: 20px 0 20px 0;
+
+}
+
