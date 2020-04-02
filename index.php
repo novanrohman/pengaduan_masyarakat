@@ -34,10 +34,10 @@
                         <a class="nav-link" href="index.php?page=info">Info</a>
                     </li>
                     <li class="nav-item">
-                        <a class="badge badge-pill btn-outline-primary  mr-2 mb-2 p-2 tombol" href="login.php">Masuk</a>
+                        <a class="badge badge-pill btn-outline-primary  mr-2 mb-2 p-2 tombol" href="views/login.php">Masuk</a>
                     </li>
                     <li class="nav-item">
-                        <a class="badge badge-pill btn-success p-2 tombol" href="sign-up.php">Daftar</a>
+                        <a class="badge badge-pill btn-success p-2 tombol" href="views/sign-up.php">Daftar</a>
                     </li>
                 </ul>
             </div>
@@ -50,19 +50,19 @@
 
             switch ($page) {
                 case 'home':
-                    include "halaman/home.php";
+                    include "views/home.php";
                     break;
                     
                 case 'about':
-                    include "halaman/about.php";
+                    include "views/about.php";
                     break;
                 
                 default:
-                    include "halaman/404.php";
+                    include "views/404.php";
                     break;
             }
         } else {
-            include "halaman/home.php";
+            include "views/home.php";
         }
 
     ?>
