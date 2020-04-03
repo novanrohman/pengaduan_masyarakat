@@ -35,15 +35,14 @@ CREATE TABLE IF NOT EXISTS `masyarakat` (
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`nik`),
   UNIQUE KEY `username` (`username`),
-  UNIQUE KEY `email` (`email`)
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `password` (`password`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `masyarakat`
 --
 
-INSERT INTO `masyarakat` (`nik`, `name`, `username`, `telp`, `email`, `password`) VALUES
-(2147483647, 'novan rohman nur', 'novan_rohman', '081276995583', 'novanrohman@gmail.com', '598920707a94a6969b1f5cbe4561607f');
 
 -- --------------------------------------------------------
 
@@ -75,7 +74,8 @@ CREATE TABLE IF NOT EXISTS `petugas` (
   `telp` varchar(13) NOT NULL,
   `level` enum('admin','petugas') NOT NULL,
   PRIMARY KEY (`usr_petugas`),
-  UNIQUE KEY `email` (`email`)
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `password` (`password`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
