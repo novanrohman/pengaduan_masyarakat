@@ -64,7 +64,7 @@ if(isset($_POST['register'])){
 
     // jika query simpan berhasil, maka user sudah terdaftar
     // maka alihkan ke halaman login
-    if($saved)header("Location: ../views/login.php");
+    if($saved) header("Location: ../views/login.php");
 }
 ?>
 
