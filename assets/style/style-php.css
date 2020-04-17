@@ -28,6 +28,11 @@ body {
         background-image: linear-gradient(to top, rgba(0,0,0,100), rgba(255,255,255,0)) ; //tambahono iku neng @media seng 576px
         border: none;
     }
+
+    .bg-black {
+        background-color: black;
+        transition: 0.5s;
+    }
 }
 
 
@@ -52,6 +57,11 @@ body {
         /* background-image: linear-gradient(to right, #c415c3, #0ec1da); */
         background-image: linear-gradient(to top, rgba(0,0,0,100), rgba(255,255,255,0)) ;
         border: none;
+    }
+
+    .bg-black {
+        background-color: black;
+        transition: 0.5s;
     }
 }
 

@@ -84,6 +84,11 @@ main {
 .bg-black{
     background-color: black;
     transition: 0.3s;
+    border-bottom: 2px solid palegoldenrod;
+}
+
+.garis{
+    border-bottom: 2px solid palegoldenrod;
 }
 
 .card {
@@ -109,7 +114,7 @@ main {
     height: 40rem;
     text-align: center;
     padding-top: 10rem;
-    background-size: cover;
+    background-size: cover;  
     margin-bottom: 0px !important;
     background: url(../img/desa.jpg);
 }

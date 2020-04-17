@@ -1,8 +1,31 @@
-<!-- Jumbotron -->
-<div class="jumbotron jumbotron bg-cover home" style="background-size:cover;">
+<?php
+// session_start();
+if (!isset($_SESSION['is_login'])) {
+    header('location:../index.php');
+}
+?>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home | Pengaduan Masyarakat</title>
+    <link rel="stylesheet" href="../assets/style/style-php.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+</head>
+
+<body>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron bg-cover home" style="background-size:cover;">
         <div class="overlay"></div>
         <div class="container pembuka">
-            <h1 class="display-3 mb-1">Selamat Datang</h1>
+            <h1 class="display-3 mb-1">Selamat Datang<br><?php echo $_SESSION['name']; ?></h1>
             <p class="lead">Posted on <span>Lorem</span></p>
             <a href="#form" class="btn badge-warning aduan text-dark">Laporkan Masalah</a>
         </div>
@@ -17,8 +40,7 @@
                     <div class="col-lg-4 col-sm-12 mt-3">
                         <div class="card bg-dark text-light">
                             <div class="card-body">
-                                <h3 class="card-title"><span style="font-size: 50px ;color: rgb(255, 255, 255);"><i
-                                            class="fab fa-github"></i></span> GITHUB</h3>
+                                <h3 class="card-title"><span style="font-size: 50px ;color: rgb(255, 255, 255);"><i class="fab fa-github"></i></span> PENGADUAN</h3>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional
                                     content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -28,8 +50,7 @@
                     <div class="col-lg-4 col-sm-12 mt-3">
                         <div class="card bg-dark text-light">
                             <div class="card-body">
-                                <h3 class="card-title"><span style="font-size: 50px ;color: rgb(255, 255, 255);"><i
-                                            class="fab fa-github"></i></span> GITHUB</h3>
+                                <h3 class="card-title"><span style="font-size: 50px ;color: rgb(255, 255, 255);"><i class="fab fa-github"></i></span> PELAYANAN</h3>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional
                                     content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -39,8 +60,7 @@
                     <div class="col-lg-4 col-sm-12 mt-3">
                         <div class="card bg-dark text-light">
                             <div class="card-body">
-                                <h3 class="card-title"><span style="font-size: 50px ;color: rgb(255, 255, 255);"><i
-                                            class="fab fa-github"></i></span> GITHUB</h3>
+                                <h3 class="card-title"><span style="font-size: 50px ;color: rgb(255, 255, 255);"><i class="fab fa-github"></i></span> FASILITAS PUBLIK</h3>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional
                                     content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -66,18 +86,15 @@
                             <form>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Nama</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Masukan nama anda">
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Masukan nama anda">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Alamat</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Masukkan alamat anda">
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Masukkan alamat anda">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Masukkan alamat Email anda" aria-describedby="emailHelp">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan alamat Email anda" aria-describedby="emailHelp">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Jenis Pengaduan</label>
@@ -89,10 +106,15 @@
                                         <option>Penerangan Jalan</option>
                                     </select>
                                 </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Pilih Gambar</label>
+                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    </div>
+                                </form>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Pesan</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                        placeholder="Pesan anda......."></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Pesan anda......."></textarea>
                                 </div>
                                 <div class="form-group form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">

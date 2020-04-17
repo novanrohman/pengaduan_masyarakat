@@ -1,3 +1,39 @@
+<?php 
+session_start();
+include_once('../configs/connection.php');
+$database = new database();
+ 
+if(isset($_SESSION['is_login']))
+{
+    header('location:index.php');
+}
+ 
+if(isset($_COOKIE['username']))
+{
+  $database->relogin($_COOKIE['username']);
+  header('location:index.php');
+}
+ 
+if(isset($_POST['login']))
+{
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if(isset($_POST['remember']))
+    {
+      $remember = TRUE;
+    }
+    else
+    {
+      $remember = FALSE;
+    }
+ 
+    if($database->login($username,$password,$remember))
+    {
+      header('location:index.php');
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,16 +75,16 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Login | Pengaduan Masyarakat</h1>
                                     </div>
-                                    <form class="user" method="POST" action="../dist/login.php">
+                                    <form class="user" method="POST">
                                         <div class="form-group">
-                                            <input type="text" name="username" class="form-control form-control-user" id="exampleInputUser" aria-describedby="emailHelp" placeholder="Enter Username">
+                                            <input for="username" type="text" name="username" class="form-control form-control-user" id="exampleInputUser" aria-describedby="emailHelp" placeholder="Enter Username">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                            <input for="password" type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <input for="remember" type="checkbox" class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">Remember Me</label>
                                             </div>
                                         </div>
@@ -67,7 +103,7 @@
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <a class="small" href="sign-up.php">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>

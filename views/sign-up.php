@@ -1,3 +1,26 @@
+<?php 
+include_once('../configs/connection.php'); //include file connection untuk konek ke database
+// object class register
+$database = new database();
+//melakukan pengecekan terhadap tombol form
+// jika bernilai true maka akan melakuak perintah di bawahnya
+// 
+if(isset($_POST['register'])) 
+{
+    $nik = $_POST['nik'];
+    $name = $_POST['name'];
+    $telp = $_POST['telp'];
+    $username = $_POST['username'];
+    $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+    $email = $_POST['email'];
+    if($database->register($nik,$name,$username,$telp,$email,$password))
+    {
+      header('location:login.php');
+    }
+}
+ 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,52 +45,6 @@
 
 <body class="bg-gradient-primary">
 
-<?php
-// require_once("../configs/config.php");
-// include('../configs/register.php');
-
-
-require_once("config.php");
-
-if(isset($_POST['register'])){
-
-    //filter data yang diinputkan
-    $nik = filter_input(INPUT_POST, 'nik', FILTER_SANITIZE_NUMBER_INT);
-    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-    
-
-    //enkripsi password
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    
-
-    //menyiapkan query
-    $sql = "INSERT INTO masyarakat (nik, name, username, telp, email, password) VALUES (:nik, :name, :username, :telp, :email, :password)";
-
-    $stmt = $db->prepare($sql);
-
-
-    // bind parameter ke query
-    $params = array(
-        ":nik" => $nik,
-        ":name" => $name,
-        ":username" => $username,
-        ":telp" => $telp,
-        ":email" => $email,
-        ":password" => $password
-    );
-
-    // eksekusi query untuk menyimpan ke database
-    $saved = $stmt->excute($params);
-
-
-    // jika query simpan berhasil, maka user sudah terdaftar
-    // maka alihkan ke halaman login
-    if($saved) header("Location: ../views/login.php");
-}
-?>
-
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
@@ -80,26 +57,30 @@ if(isset($_POST['register'])){
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user">
+                            <form class="user" method="POST">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" placeholder="NIK" name="nik">
+                                    <input type="text" class="form-control form-control-user" placeholder="NIK" name="nik" for="nik">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" placeholder="Name" name="name">
+                                    <input type="text" class="form-control form-control-user" placeholder="Name" name="name" for="name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" placeholder="Username" name="username">
+                                    <input type="text" class="form-control form-control-user" placeholder="Username" name="username" for="username">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" placeholder="Telepon" name="telp">
+                                    <input type="text" class="form-control form-control-user" placeholder="Telepon" name="telp" for="telp">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user"  placeholder="Email Address" name="email">
+                                    <input type="email" class="form-control form-control-user"  placeholder="Email Address" name="email" for="email">
                                 </div>
                                 <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" placeholder="Password" name="password">
+                                        <input type="password" class="form-control form-control-user" placeholder="Password" name="password" for="password">
                                 </div>
-                                <input type="submit" class="btn btn-primary btn-user btn-block" name="register" value="Sign-up">
+
+                                <!-- Captcha -->
+
+                                <!-- End Captcha -->
+                                <input method="POST" type="submit" class="btn btn-primary btn-user btn-block" name="register" value="Sign-up">
                                 <hr>
                                 <a href="index.html" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Register with Google
@@ -113,7 +94,7 @@ if(isset($_POST['register'])){
                                 <a class="small" href="forgot-password.html">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="login.php">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>

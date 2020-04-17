@@ -1,3 +1,45 @@
+<?php 
+session_start();
+include_once('../configs/connection.php');
+$database = new database();
+ 
+if(isset($_SESSION['is_login']))
+{
+    header('location:login.php');
+}
+ 
+if(isset($_COOKIE['username']))
+{
+  $database->relogin($_COOKIE['username']);
+  header('location:index.php');
+}
+ 
+if(isset($_POST['login']))
+{
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if(isset($_POST['level']))
+    {
+        $level = "admin";
+        header('location:admin/index.php');
+    } if {
+        $level = "petugas";
+        header('location:petugas/index.php');
+    } else {
+        echo "<script>alert'</script>"
+    }
+
+    if(isset($_POST['remember']))
+    {
+      $remember = TRUE;
+    }
+    else
+    {
+      $remember = FALSE;
+    }
+ 
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
