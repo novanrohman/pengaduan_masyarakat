@@ -34,17 +34,17 @@ if (!isset($_SESSION['is_login'])) {
         <div class="card container" id="cardAbout">
             <div class="card-body row">
                 <div class="col-md-4 mb-3">
-                    <img class="img-about" src="assets/icon/github.png" alt="">
-                    <h4 class="card-title">Github</h4>
+                    <img class="img-about" src="../assets/icon/twitter.png" alt="">
+                    <h4 class="card-title">Twitter</h4>
                     <p class="card-text text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quam enim tempore eos eum voluptates corporis exercitationem cumque necessitatibus. A error et qui. Magnam quis labore iste soluta, ipsa nesciunt.</p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <img class="img-about" src="assets/icon/facebook.png" alt="">
+                    <img class="img-about" src="../assets/icon/facebook.png" alt="">
                     <h4 class="card-title">Facebook</h4>
                     <p class="card-text text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quam enim tempore eos eum voluptates corporis exercitationem cumque necessitatibus. A error et qui. Magnam quis labore iste soluta, ipsa nesciunt.</p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <img class="img-about" src="assets/icon/instagram.png" alt="">
+                    <img class="img-about" src="../assets/icon/instagram.png" alt="">
                     <h4 class="card-title">instagram</h4>
                     <p class="card-text text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quam enim tempore eos eum voluptates corporis exercitationem cumque necessitatibus. A error et qui. Magnam quis labore iste soluta, ipsa nesciunt.</p>
                 </div>

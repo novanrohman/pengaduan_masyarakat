@@ -38,7 +38,7 @@ if (!isset($_SESSION['is_login'])) {
             <div class="content">
                 <div class="row">
                     <div class="col-lg-4 col-sm-12 mt-3">
-                        <div class="card bg-dark text-light">
+                        <div class="card card-1 bg-dark text-light">
                             <div class="card-body">
                                 <h3 class="card-title"><span style="font-size: 50px ;color: rgb(255, 255, 255);"><i class="fab fa-github"></i></span> PENGADUAN</h3>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional
@@ -48,7 +48,7 @@ if (!isset($_SESSION['is_login'])) {
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-12 mt-3">
-                        <div class="card bg-dark text-light">
+                        <div class="card card-1 bg-dark text-light">
                             <div class="card-body">
                                 <h3 class="card-title"><span style="font-size: 50px ;color: rgb(255, 255, 255);"><i class="fab fa-github"></i></span> PELAYANAN</h3>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional
@@ -58,7 +58,7 @@ if (!isset($_SESSION['is_login'])) {
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-12 mt-3">
-                        <div class="card bg-dark text-light">
+                        <div class="card card-1 bg-dark text-light">
                             <div class="card-body">
                                 <h3 class="card-title"><span style="font-size: 50px ;color: rgb(255, 255, 255);"><i class="fab fa-github"></i></span> FASILITAS PUBLIK</h3>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional

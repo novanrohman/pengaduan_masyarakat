@@ -13,8 +13,6 @@ include "../../configs/connection.php";
 //    {
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +23,6 @@ include "../../configs/connection.php";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Pengaduan Masyarakat - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="../../admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -56,6 +52,13 @@ include "../../configs/connection.php";
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
+             <!-- Nav Item - home -->
+            <li class="nav-item">
+                <a class="nav-link" href="../index.php">
+                <i class="fas fa-undo-alt"></i>
+                    <span>Back to Home</span></a>
+            </li>
+
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="index.php?page=dashboard">
@@ -76,28 +79,6 @@ include "../../configs/connection.php";
                 <a class="nav-link" href="index.php?page=message">
                     <i class="fas fa-envelope fa-fw"></i>
                     <span>Message</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?page=charts">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?page=tables">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
             </li>
 
             <!-- Divider -->
@@ -300,6 +281,7 @@ include "../../configs/connection.php";
                 </nav>
                 <!-- End of Topbar -->
 
+
 <?php 
         if(isset($_GET['page'])){
             $page = $_GET['page'];
@@ -315,6 +297,10 @@ include "../../configs/connection.php";
 
                 case 'tables':
                     include "tables.php";
+                    break;
+
+                case 'message':
+                    include "message.php";
                     break;
                 
                 default:

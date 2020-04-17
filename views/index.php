@@ -35,7 +35,7 @@ if(! isset($_SESSION['is_login']))
                         <a class="badge badge-pill btn-success p-2 tombol" href="logout.php">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="badge badge-pill btn-success p-2 tombol" href="info-akun/index.php">Akun</a>
+                        <a class="badge badge-pill btn-danger p-2 tombol" href="info-akun/index.php">Akun</a>
                     </li>
                 </ul>
             </div>
